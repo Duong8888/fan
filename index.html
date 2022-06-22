@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÁNH DƯƠNG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="fan">
+            <div class="propeller">
+                <img src="img/Picture1.png" alt="">
+            </div>
+            <img src="img/Picture2.png" alt="">
+            <div class="control">
+                <button onclick="run(this)">0</button>
+                <button onclick="run(this)">1</button>
+                <button onclick="run(this)">2</button>
+                <button onclick="run(this)">3</button>
+            </div>
+        </div>
+    </div>
+    <script>
+        var fan = document.querySelector('.propeller>img');
+        function run(number) {
+            if (number.innerText == 1) {
+                fan.style.animation = 'runFan 2s infinite linear';
+            } else if (number.innerText == 2) {
+                fan.style.animation = 'runFan 0.5s infinite linear';
+            } else if (number.innerText == 3) {
+                fan.style.animation = 'runFan 0.001s infinite linear';
+            } else {
+                fan.style.animation = '';
+            }
+        }
+
+    </script>
+</body>
+
+</html>
